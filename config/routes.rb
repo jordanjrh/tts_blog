@@ -2,13 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   resources :comments
   resources :posts
-root 'practice#index'
+root 'post#index'
 
-get 'index' => 'practice#index'
-
-get 'posts' => 'post#index'
-
-get 'about' => 'practice#about'
+# get 'index' => 'practice#index'
+#
+# get 'posts' => 'post#index'
+#
+# get 'about' => 'practice#about'
 
 
 

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-Welcome <%= current_user.email %>!
+Welcome <%= current_user.username %>!
 
 <h1>Posts</h1>
 
@@ -19,7 +19,7 @@ Welcome <%= current_user.email %>!
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.author %></td>
+        <td><%= post.user.email %></td>
         <td><%= post.blog_entry %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>

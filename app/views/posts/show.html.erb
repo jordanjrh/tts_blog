@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Author:</strong>
-  <%= @post.author %>
+  <%= @post.user.username %>
+</p>
+
+<p>
+  <% if @post.user.avatar.url %>
+    <%= image_tag @post.user.avatar.url, width: '100'%>
+  <% end %>
 </p>
 
 <p>
