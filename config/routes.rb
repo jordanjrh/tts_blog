@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :comments
   resources :posts
-root 'post#index'
+root 'posts#index'
 
 # get 'index' => 'practice#index'
 #
