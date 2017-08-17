@@ -1,0 +1,19 @@
+<div id="random_div"</div>
+
+<style>
+
+    #random_div {
+        background-color: <%= @color %>;
+        color: white;
+        width: 250px;
+        height: 250px;
+    }
+
+</style>
+
+<%= form_tag index_path do %>
+
+    <p><%= text_field_tag :name, nil, placeholder: "What's your name?" %></p>
+    <p><%= submit_tag :submit %></p>
+
+<% end %>

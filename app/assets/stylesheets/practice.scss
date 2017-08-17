@@ -1,0 +1,41 @@
+// Place all the styles related to the Practice controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+	padding: 0 100px;
+}
+.navbar_wrapper {
+	list-style-type: none;
+
+	float: left;
+
+	width: 100%;
+
+	margin: 0 auto;
+
+	padding: 0;
+
+	background-color: transparent;
+}
+
+.navbar_wrapper li {
+	float: left;
+
+	padding: 0 10px;
+
+	font-family: 'Bellefair', serif;
+
+}
+
+.navbar_wrapper li a {
+	display: inline-block;
+
+	text-decoration: none;
+
+	padding: 8px 15px;
+
+	color: black;
+
+	font-family: 'EB Garamond', serif;
+
+}
