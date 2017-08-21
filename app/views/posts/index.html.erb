@@ -2,8 +2,8 @@
 
 Welcome <%= current_user.username %>!
 
-<h1>Posts</h1>
-
+<h3>Block Entries</h3>
+<%= paginate @posts %>
 
 <table>
   <thead>
@@ -15,18 +15,22 @@ Welcome <%= current_user.username %>!
     </tr>
   </thead>
 
+
   <tbody>
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.user.username %></td>
+        <td>by <em><%= link_to post.user.username, user_posts_path(name: post.user.username) %></em></td>
         <td><%= post.blog_entry %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
   </tbody>
+</div>
+</div>
 </table>
 
 <br>

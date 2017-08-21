@@ -2,15 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   resources :comments
   resources :posts
+
 root 'posts#index'
 
-# get 'index' => 'practice#index'
-#
-# get 'posts' => 'post#index'
-#
-# get 'about' => 'practice#about'
+get 'user_posts' => 'posts#user_posts', as: :user_posts
 
-
+get 'post' => 'posts#index'
 
 
   # root 'practice#index'

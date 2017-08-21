@@ -14,7 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-
+//= require local-time
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .

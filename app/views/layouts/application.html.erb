@@ -7,14 +7,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
-    <div class="container">
-      <div class="pull-right">
-        <% if user_signed_in? %>
-        <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %> 
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
-    <% end %>
-  </div>
+
+
+          <div class="left">
+            <% if user_signed_in? %>
+            <%= link_to "Home", root_path, class: "btn-group btn-group-xs" %>
+          <% end %>
+
+          <div class="pull-right">
+              <% if user_signed_in? %>
+              <%= link_to "Edit Profile", edit_user_registration_path, class: "btn-group btn-group-xs" %>
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-group btn-group-xs" %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
+
+
     <%= yield %>
   </body>
 </html>
